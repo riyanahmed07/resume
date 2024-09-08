@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="head"> <header>
+        <h1>Dynamic Resume Builder</h1>
+    </header>
+
+    <!-- Form to collect user input -->
+    <section  id="form-section">
+        <h2>Fill Out Your Information</h2>
+        <form id="resume-form">
+            <fieldset >
+                <legend class="top">Personal Information</legend>
+                <label class="main"  for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label  class="main" for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label  class="main" for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <label  class="main" for="profile-picture">Profile Picture URL:</label>
+                <input type="url" id="profile-picture" name="profile-picture">
+            </fieldset>
+
+            <fieldset>
+                <legend class="top">Education</legend>
+                <label  class="main" for="education">Education Details:</label>
+                <textarea id="education" name="education" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend class="top">Work Experience</legend>
+                <label  class="main" for="work-experience">Work Experience Details:</label>
+                <textarea id="work-experience" name="work-experience" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend class="top">Skills</legend>
+                <div id="skills-container">
+                    <label class="main"  for="skill1">Skill 1:</label>
+                    <input type="text" id="skill1" name="skills[]">
+                </div>
+                <button  class="main btn" type="button" id="add-skill">Add Another Skill</button>
+            </fieldset>
+
+            <button  class="main btn" type="submit">Generate Resume</button>
+        </form>
+    </section></div>
+
+    <hr class="line">
+
+    <!-- Section to display the generated resume -->
+    <section  id="resume-section">
+        <div id="resume-content">
+            <!-- Resume content will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
